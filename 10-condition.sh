@@ -4,7 +4,7 @@
 day_of_week=$(date)
 
 # Check if today is Sunday
-if [ "$day_of_week" -nq "Sunday" ]; then
+if [ "$day_of_week" -ne "Sunday" ]; then
     echo "Today is not holiday."
     exit 1
 else
