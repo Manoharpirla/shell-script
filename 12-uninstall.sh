@@ -24,7 +24,7 @@ fi
 # fi
 dnf list installed git
 
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then
     dnf remove git -y
     if [ $? -eq 0 ]
