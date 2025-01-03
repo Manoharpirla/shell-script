@@ -12,7 +12,7 @@ dnf list installed mysql
 if [ $? -ne 0 ]
 then # installed
     dnf remove mysql -y
-    if [ $? -ne 0 ]
+    if [ $? -eq 0 ]
     then
         echo "Removing Mysql ... FAILURE"
         exit 1
@@ -27,7 +27,7 @@ dnf list installed git
 if [ $? -ne 0 ]
 then
     dnf remove git -y
-    if [ $? -ne 0 ]
+    if [ $? -eq 0 ]
     then
         echo "Removin Git ... FAILURE"
         exit 1
