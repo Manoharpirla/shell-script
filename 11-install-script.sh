@@ -10,7 +10,7 @@ fi
 dnf list installed mysql
 
 if [ $? -ne 0 ]
-then # not installed
+then # not is installed
     dnf install mysql -y
     if [ $? -ne 0 ]
     then
