@@ -11,19 +11,13 @@ fi
 
  echo "mysql service version: $FILE"
 
-if [ $? -ne 0 ]
+if [ $FILE -eq 0 ]
 then # installed
     dnf remove mysql-8.0.36-1.el9_3.x86_64 -y
-    if [ $? -ne 0 ]
-    then
-        echo "Removing MySQL ... FAILURE"
-        exit 1
+    echo "Removing MySQL ... SUCCESS"
     else
-        echo "Removing MySQL ... SUCCESS"
-    fi
-else
     echo "MySQL is already ... Removed"
-fi
+    fi
 FILE2=$(dnf list git-2.43.5-1.el9_4.x86_64)
 
 echo "Git version : $FILE2"
