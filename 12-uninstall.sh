@@ -29,7 +29,7 @@ then
     dnf remove git -y
     if [ $? -eq 0 ]
     then
-        echo "Removin Git ... FAILURE"
+        echo "Removin Git  ..... FAILURE"
         exit 1
     else
         echo "Removin Git ... SUCCESS"
